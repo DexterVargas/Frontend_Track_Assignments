@@ -56,6 +56,7 @@ function ContactForm() {
 				</Form.Group>
 			</Form>
 			<div className='user-list-container'>
+				<div>CONTACTS</div>
 				{userList}
 			</div>
 		</>
