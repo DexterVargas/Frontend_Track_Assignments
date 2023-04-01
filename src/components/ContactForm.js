@@ -23,6 +23,16 @@ const onAddContact = (e) => {
 	console.log(Users);
 } 
 
+const UserList = () => {
+	let userList = [];
+	for (let i = 0; i < Users.length; i++) {
+		userList.push(<RenderList key={i} userName={Users[i].userName} userEmail={Users[i].userEmail} userInitial={Users[i].userInitial} />);
+	}
+	return userList;
+	//  const userList = Users.map((user,ind) => (<RenderList key={ind} userName={user.userName} userEmail={user.userEmail} userInitial={user.userInitial} />));
+	//  return userList;
+}
+
 function ContactForm() {
 	const [,reloadPage] = useState(0);
 	const [name, setName] = useState('');
@@ -36,7 +46,6 @@ function ContactForm() {
 			setEmail(e.target.value);
 		}
 	}
-	const userList = Users.map((user,ind) => (<RenderList key={ind} userName={user.userName} userEmail={user.userEmail} userInitial={user.userInitial} />));
 	return (
 		<>
 			<Form>
@@ -57,7 +66,7 @@ function ContactForm() {
 			</Form>
 			<div className='user-list-container'>
 				<div>CONTACTS</div>
-				{userList}
+				<UserList />
 			</div>
 		</>
 	);
