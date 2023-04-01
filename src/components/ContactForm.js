@@ -22,12 +22,11 @@ const onAddContact = (e) => {
 	Users.push({userName: name.value, userEmail: email.value, userInitial: getInitial.toUpperCase()});
 	console.log(Users);
 } 
-
 function ContactForm() {
+	
 	const [,reloadPage] = useState(0);
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
-
 
 	const handleInput = (e) => {
 		if (e.target.name === 'name') {
@@ -36,10 +35,13 @@ function ContactForm() {
 			setEmail(e.target.value);
 		}
 	}
-	const userList = Users.map((user,ind) => (<RenderList key={ind} userName={user.userName} userEmail={user.userEmail} userInitial={user.userInitial} />));
 	return (
 		<>
-			<Form>
+			<Form  onSubmit= {(e) => { 
+						onAddContact(e);
+						setName('');
+						setEmail('');
+						reloadPage(Math.random());}} >
 				<h1>Contact Registration Form</h1>
 				<Form.Group className="mb-3" controlId="formBasicEmail">
 					<FloatingLabel label="Name" controlId="floatingInput" className='mb-3 mt-4'>
@@ -48,16 +50,12 @@ function ContactForm() {
 					<FloatingLabel label="E-mail" controlId="floatingInput" className='mb-3'>
 						<Form.Control type="email" placeholder="email" required name="email" value={email} onChange={handleInput}/>
 					</FloatingLabel>
-					<Button variant="primary" type="reset" onClick= {(e) => { 
-						onAddContact(e);
-						setName('');
-						setEmail('');
-						reloadPage(Math.random());}} >Add</Button>	
+					<Button variant="primary" type="submit">Add</Button>	
 				</Form.Group>
 			</Form>
 			<div className='user-list-container'>
 				<div>CONTACTS</div>
-				{userList}
+				<RenderList />
 			</div>
 		</>
 	);
