@@ -10,46 +10,49 @@ body{
     height: 450px;
     overflow-y: scroll;
 }
-.post-container{
-    width: 600px;
+.cart-container{
+    width: 100%;
     height: fit-content;
     text-align: left;
-    margin: 0 auto;
-    background-color: aliceblue;
-    margin-top: 2px;
-    border: #001233 1px solid;
-    border-radius: 5px;
+    border-bottom: rgba(188, 192, 206, .4) solid 1px;
 }
-.post-avatar{
+
+.cart-img{
     display: inline-block;
-    width: 70px;
-    height: 70px;
-    margin: 10px;
-    border-radius: 50%;
-    font-size: 2em;
-    background-color: burlywood;
-    text-align: center;
-    line-height: 70px;
+    width: 120px;
+    height: 120px; 
+    margin: 0px;
+    border-radius: 10px;
 }
 .name-container{
     display: inline-block;
+    width: 60%;
     vertical-align: top;
-    margin-left: 15px;
+    padding: 10px;
+    border-right: #bcc0ce 1px solid;
 }
-h1,h2{
+.subtotal,.price{
+    font-size: 1.3em;
+}
+.compute-container{
+    display: inline-block;
+    padding: 5px;
+    vertical-align: middle;
+}
+h1{
     margin: 0;
     padding: 0;
     margin-top: 5px;
     font-size: 2em;
 }
-h2{
+h3{
+    border-top: #001233 solid 2px;
+    text-align: right;
     font-weight: lighter;
-    font-size: 1.5em;
 }
-span{
-    font-size: .6em;
-    color: gray;
-    font-weight: lighter;
+p{
+    margin:0px;
+    text-align: left;
 }
 .version{
     border-bottom: 1px solid #001233;
@@ -61,18 +64,18 @@ img {
     height: 500px;
 }
 .logo{
-    width: 100px;
-    height: 40px;  
+    width: 150px;
+    height: 60px; 
 }
 Form{
-    width: 600px;
-    text-align: left;
+    width: 900px;
+    text-align: center;
     margin: 0 auto;
     padding: 20px;
     border: #001233 1px solid;
     border-radius: 20px;
     background-color: aliceblue;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 30px;
 }
 .handwriting {
@@ -90,4 +93,72 @@ footer{
 .footer-logo-container{
     font-size: 1.5em;
     text-decoration: underline;
+}
+#address{
+    height: 100px;
+    resize: none;
+}
+.check{
+    position: absolute;
+}
+.check:hover{
+    background-color: rgba(192, 224, 251, 0.1);
+    cursor: pointer;
+}
+.product-container{
+    width: 200px;
+    height: fit-content;
+    display: inline-block;
+    background-color: #ffff;
+    border-radius: 5px;
+    border:1px solid rgb(197, 195, 195);
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+    vertical-align: top;
+}
+.product-img{
+    width: 170px;
+    height: 170px; 
+    border-bottom:1px solid rgb(197, 195, 195);
+}
+.quantity{
+    width: fit-content;
+    font-size: .8em;
+}
+.product-name{
+    margin: 3px 0;
+    font-size: 1.1em;
+}
+.price{
+    color:darkcyan;
+    font-weight: bolder;
+    margin: 3px 0;
+}
+span{
+    font-size: .7em;
+    color: gray;
+    font-weight: lighter;
+    margin: 3px 0;
+}
+.form-label{
+    margin: 0;
+}
+.desc{
+    cursor: pointer;
+}
+.desc:hover{
+    text-decoration: underline;
+    color: cornflowerblue;
+}
+.toast{
+    position: absolute;
+    width: 300px;
+}
+.toast-header{
+    background-color: rgba(95, 158, 160, .5);
+    color:rgb(3, 93, 94);
+}
+.modal-content{
+    width: auto;
 }

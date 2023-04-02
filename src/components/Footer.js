@@ -5,7 +5,7 @@ import "../assets/stylesheets/style.css";
 
 function Footer() {
   return (
-    <footer className="text-center text-white fixed-bottom">
+    <footer className="text-center text-white bottom">
         <div className="container p-2 footer-logo-container"><img className="footer-logo" src={logo} alt="footer-logo"/>{'  '}Rockstar FE!</div>
         <div className="text-center p-2">
             V88 Batch-4 FE Track, ©️ 2023 Copyright:{' '}
