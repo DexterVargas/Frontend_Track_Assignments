@@ -1,11 +1,21 @@
-import OrderForm from './OrderForm';
 import NavbarSection from './NavbarSection';
 import Footer from './Footer';
+import {Routes,Route} from 'react-router-dom';
+import Home from './routes/Home';
+import AboutMe from './routes/AboutMe';
+import Gallery from './routes/Gallery';
+import NotMatch from './routes/NoMatch';
+
 function App() {
     return (
         <>
             <NavbarSection />
-            <OrderForm />
+            <Routes>
+                <Route exact path='/' element={<Home/>}></Route>
+                <Route exact path='/aboutMe' element={<AboutMe/>}></Route>
+                <Route exact path='/gallery' element={<Gallery/>}></Route>
+                <Route path='*' element={<NotMatch/>}></Route>
+			</Routes>
             <Footer />
         </>
     );    
