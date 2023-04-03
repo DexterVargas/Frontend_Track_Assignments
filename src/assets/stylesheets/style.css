@@ -5,7 +5,7 @@ body{
     color: #001233;
     font-family: 'Lato', sans-serif;
 	text-align: center;
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/bg.png);
 }
 .user-list-container{
     width: auto;
