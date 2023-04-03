@@ -12,7 +12,7 @@ function NavbarSection() {
 			<Container>
 					<Navbar.Brand>
 						<Link to='/' className='nav-link' role='button'>
-							<h1 className='handwriting'>Dexter</h1>
+							<h1 className='handwriting'>&#123;Dexter&#125;</h1>
 						</Link>
 					</Navbar.Brand>
 					<Nav className="ms-auto">
