@@ -4,7 +4,7 @@ import "../assets/stylesheets/style.css";
 
 function Footer() {
   return (
-    <footer className="text-center text-dark fixed-bottom">
+    <footer className="text-center text-dark bottom">
         <div className="container p-1 footer-logo-container"><span className='handwriting'>Dexter Vargas</span></div>
         <div className="text-center p-1">
             V88 Batch-4 FE Track, ©️ 2023 Copyright:{' '}

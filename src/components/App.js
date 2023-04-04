@@ -3,7 +3,7 @@ import Footer from './Footer';
 import {Routes,Route} from 'react-router-dom';
 import Home from './routes/Home';
 import AboutMe from './routes/AboutMe';
-import PollSurvey from './routes/PollSurvey';
+import MoneyBetGame from './routes/MoneyBetGame';
 import NotMatch from './routes/NoMatch';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
             <Routes>
                 <Route exact path='/' element={<Home/>}></Route>
                 <Route exact path='/aboutMe' element={<AboutMe/>}></Route>
-                <Route exact path='/survey' element={<PollSurvey/>}></Route>
+                <Route exact path='/moneybetgame' element={<MoneyBetGame/>}></Route>
                 <Route path='*' element={<NotMatch/>}></Route>
 			</Routes>
             <Footer />
