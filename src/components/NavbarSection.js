@@ -18,7 +18,7 @@ function NavbarSection() {
 					<Nav className="ms-auto">
 						<Link to='/' className='nav-link' role='button'>Home</Link>
 						<Link to='/aboutMe' className='nav-link' role='button'>About Me</Link>
-						<Link to='/gallery' className='nav-link' role='button'>Gallery</Link>
+						<Link to='/survey' className='nav-link' role='button'>Poll Survey</Link>
 					</Nav>
 			</Container>
 		</Navbar>
