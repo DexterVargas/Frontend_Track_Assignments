@@ -31,14 +31,14 @@ const MoneyBet = () => {
         let variance = betReward <= 0 ? 'danger' : 'success';
         LogList.push(<Alert key={betReward+chance} variant={variance} className='p-1 m-1'>
                         <p className='text-left'>
-                        *${new Date().toLocaleString()} | You clicked "${BetList[betType].betTitle}", value is ${betReward}. Current Money is ${money} with {chance} chance/s left.
+                        *{new Date().toLocaleString()} | You clicked "{BetList[betType].betTitle}", value is ${betReward}. Current Money is ${money} with {chance} chance/s left.
                         </p>
                     </Alert>);  
     }  
 
     useEffect(() => {
+
         if (money <= 0 || chance === 0) {
-            console.log('loading game over');
             LogList.push(<Alert key='gameover' variant='warning' className='p-1'>
                             <p className='text-left'>GAME OVER!!!</p>
                         </Alert>);
@@ -85,15 +85,11 @@ const MoneyBet = () => {
             <h2>Chance/s left♾️: {chance}</h2>
 
             { generateMachine }
-            
+
             <div style={{ width: '870px', height:'500px', overflowY:'scroll'}} className='mx-auto'>
                 { logs }
             </div>
-            <GameOver
-                show={modalShow}
-                onHide={() => setModalShow(false)}
-                dollar = {bag}
-            />
+            <GameOver show={modalShow} onHide={() => setModalShow(false)} dollar = {bag} />
         </>
     );
 }

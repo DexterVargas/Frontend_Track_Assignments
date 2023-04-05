@@ -1,4 +1,4 @@
-import MoneyBet from '../MoneyBet';
+import MoneyBet from '../components/MoneyBet';
 
 const MoneyBetGame = () => {
     return <MoneyBet />

@@ -10,15 +10,10 @@ const GameOver = (props) => {
     }
 
     return (
-        <Modal
-        {...props}
-        size="lg"
-        aria-labelledby="gameover"
-        centered
-        >
+        <Modal {...props} size="lg" aria-labelledby="gameover" centered >
             <Modal.Header closeButton>
                 <Modal.Title id="GAME-OVER">
-                GAME OVER!!
+                    GAME OVER!!
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>

@@ -1,6 +1,6 @@
-import "../../assets/stylesheets/style.css";
+import "../assets/stylesheets/style.css";
 import Button from "react-bootstrap/Button";
-import profile from '../../assets/images/saitama-about.png'
+import profile from '../assets/images/saitama-about.png'
 
 const AboutMe = () => {
     return (

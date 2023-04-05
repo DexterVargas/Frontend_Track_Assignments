@@ -1,10 +1,10 @@
 import NavbarSection from './NavbarSection';
 import Footer from './Footer';
 import {Routes,Route} from 'react-router-dom';
-import Home from './routes/Home';
-import AboutMe from './routes/AboutMe';
-import MoneyBetGame from './routes/MoneyBetGame';
-import NotMatch from './routes/NoMatch';
+import Home from '../pages/Home';
+import AboutMe from '../pages/AboutMe';
+import MoneyBetGame from '../pages/MoneyBetGame';
+import NotMatch from '../pages/NoMatch';
 
 function App() {
     return (
