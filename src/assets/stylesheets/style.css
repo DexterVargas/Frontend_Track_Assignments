@@ -146,30 +146,39 @@ footer{
 .read-more{
     padding: 10px 25px;
 }
-.btn:disabled{
-    border-color: #6c757d;
-    color: #6c757d;
-}
-.bet-details{
-    color: #6c757d;
-    font-size: 1.5em;
-}
 
-.logo-img{
-    width: 170px;
-    height: 170px; 
+.window{
+    width: 300px;
+    height: 300px;  
 }
-span{
-    font-size: .7em;
-    color: gray;
-    font-weight: lighter;
-    margin: 3px 0;
+.col-container{
+    position: relative;
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    z-index: 9999;
+    margin: 50px;
 }
-.generate-number{
-    left: 25px;
-    top: 88px;
-    font-size: 2em;
+.pet{
+    position: absolute;
+    top: 45px;
+    left: 50px;
+    width: 230px;
+    height: 230px; 
+    z-index: -9999;
 }
-.details{
-    font-size: 1em;
+.row-container{
+    display: inline-block;
+    width: 300px;
+    margin: 50px;
+}
+.cat{
+    left: 1300px;
+}
+.bg-pet{
+    left: 0;
+    top: 250px;
+}
+.form-container{
+    left: 200px;
 }
