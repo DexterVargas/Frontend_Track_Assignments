@@ -1,27 +1,36 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Badge from 'react-bootstrap/Badge';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../assets/images/logo.png';
+import {Link} from 'react-router-dom';
+// import NavLink from 'react-bootstrap/esm/NavLink';
 
 function NavbarSection() {
 	return (
-	<>
-		<Navbar bg="dark" variant="dark">
+	<>	
+		<Navbar bg="light" variant="light">
 			<Container>
-				<Navbar.Brand href="http://localhost:3000/">
-					<img
-					alt=""
-					src={logo}
-					className="d-inline-block align-top logo"
-					/>
-				</Navbar.Brand>
-				<Nav className="me-auto">
-					<Nav.Link href="http://localhost:3000/">HOME</Nav.Link>
-					<Nav.Link href="https://www.linkedin.com/in/dexter-vargas-801b96241/">ABOUT</Nav.Link>
-					<Nav.Link href="#notif">🔔<Badge bg="danger">1</Badge></Nav.Link>
-				</Nav>
+					<Navbar.Brand>
+						<Link to='/' className='nav-link' role='button'>
+							<h1 className='handwriting'>&#123;Dexter&#125;</h1>
+						</Link>
+					</Navbar.Brand>
+					<Nav className="ms-auto">
+						<Link to='/' className='nav-link' role='button'>Home</Link>
+						<Link to='/aboutMe' className='nav-link' role='button'>About Me</Link>
+						<NavDropdown title="FE Assignments" id="basic-nav-dropdown">
+							<NavDropdown.Item>Order Form</NavDropdown.Item>
+							<NavDropdown.Item>Poll Survey</NavDropdown.Item>
+							<NavDropdown.Item>Money Button Game</NavDropdown.Item>
+							<NavDropdown.Item>My Pet</NavDropdown.Item>
+							<NavDropdown.Divider />
+							<NavDropdown.Item>
+								<Link to='/assignments/contactlist' className='nav-link' role='button'>Contact List|LocalStorage</Link>
+							</NavDropdown.Item>
+						</NavDropdown>
+						
+					</Nav>
 			</Container>
 		</Navbar>
 	</>
