@@ -24,9 +24,12 @@ function NavbarSection() {
 							<NavDropdown.Item>Poll Survey</NavDropdown.Item>
 							<NavDropdown.Item>Money Button Game</NavDropdown.Item>
 							<NavDropdown.Item>My Pet</NavDropdown.Item>
+							<NavDropdown.Item>Contact List | Local Storage</NavDropdown.Item>
+							<NavDropdown.Item>Jokes | Reaction</NavDropdown.Item>
+							<NavDropdown.Item>Image API</NavDropdown.Item>
 							<NavDropdown.Divider />
 							<NavDropdown.Item>
-								<Link to='/assignments/contactlist' className='nav-link' role='button'>Contact List|LocalStorage</Link>
+								<Link to='/assignments/todolist' className='nav-link' role='button'>TO-DO List APP</Link>
 							</NavDropdown.Item>
 						</NavDropdown>
 						
