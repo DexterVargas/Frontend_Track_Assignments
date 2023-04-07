@@ -3,7 +3,7 @@ import Footer from './Footer';
 import {Routes,Route} from 'react-router-dom';
 import Home from '../pages/Home';
 import AboutMe from '../pages/AboutMe';
-import Jokes from '../pages/assignments/Jokes';
+import SplashApi from '../pages/assignments/SplashApi';
 import NotMatch from '../pages/NoMatch';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
             <Routes>
                 <Route exact path='/' element={<Home/>}></Route>
                 <Route exact path='/aboutMe' element={<AboutMe/>}></Route>
-                <Route exact path='/assignments/reaction' element={<Jokes/>}></Route>
+                <Route exact path='/assignments/imageapi' element={<SplashApi/>}></Route>
                 <Route path='*' element={<NotMatch/>}></Route>
 			</Routes>
             <Footer />
