@@ -1,8 +1,12 @@
 import Axios from 'axios';
+const KEY = 'AIzaSyD6y9yv8_NGSSCYvvyf-0FgFkTM_aOEVqM';
 
 export default Axios.create({
-    baseURL: 'https://api.unsplash.com/search/photos?page=1&query=',
-    headers: {}
+    baseURL: 'https://www.googleapis.com/youtube/v3/',
+    params:{
+        part: 'snippet',
+        key: KEY
+    }
 });
 
 // import { createApi } from 'unsplash-js';

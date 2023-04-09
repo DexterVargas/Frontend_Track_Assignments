@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../../../assets/stylesheets/style.css";
+import "../../assets/stylesheets/style.css";
 import React, { useEffect, useState } from "react";
 // import api from './api/useAxiosAPI'
 // import SplashComp from './data/SplashComp'
@@ -12,7 +12,7 @@ import Axios from 'axios';
 
 const SplashComp = () => {
 	const [searchValue, setSearchValue] = useState('');
-    const [cliendId, setclientId] = useState('fQzuA7gox2Futpg5mk8z97DfNXGccoG06ZTI5FXDv4E');
+    const [cliendId, setclientId] = useState('AIzaSyD6y9yv8_NGSSCYvvyf-0FgFkTM_aOEVqM');
     const [fetchData, setfetchData] = useState('');
     const [fethcedImages, setfetchedImages] = useState([]);
 	const handleChange= (e) => {
@@ -55,6 +55,7 @@ const SplashComp = () => {
 				</FloatingLabel>
 				<Button variant="primary" type="submit" onClick={handleSearch} style={{width:'100px'}}><FaSearch /></Button>
 			</InputGroup>
+            
             <div className='galleryWrap'>
                 {fethcedImages.map((img) => {return (<img src={img.urls.small} alt={img.alt_description} key={img.id} className='m-2 load-images'/>)})}
             </div>

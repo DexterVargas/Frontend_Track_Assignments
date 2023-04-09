@@ -1,0 +1,6 @@
+.col, .row{
+    outline: 1px solid green;
+}
+.row{
+    height: 90vh;
+}
