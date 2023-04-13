@@ -9,7 +9,7 @@ import RenderList from '../data/RenderList';
 
 export const Contacts  = createContext();
 
-function ContactForm() {
+const ContactForm = () => {
 
 	const [contacts, setContacts] = useState([]);
 	const [inputs, setInputs] = useState({username: '', email: ''});
