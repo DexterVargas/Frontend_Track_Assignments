@@ -1,85 +1,36 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { act } from "react-dom/test-utils";
-import { expect } from "chai";
-import { RenderList } from '../pages/assignments/data/RenderList';
+import '@testing-library/jest-dom';
+import { render, screen} from '@testing-library/react';
 
-var jsdom = require("mocha-jsdom");
-let rootContainer;
+import TaskLogger from '../components/TaskLogger';
+// import userEvent from "@testing-library/user-event";
 
-/* setting DOM testing library to execute the test in our console */
-global.document = jsdom({
-    url: "http://localhost:3000/"
+test('it should have the correct title "Tasks Logger"', () => {
+    render(<TaskLogger />);
+    const text = screen.getByText('Tasks Logger');
+    expect(text).toBeInTheDocument();
 });
 
-/*hook that is run automatically before each test*/
-beforeEach(() => {
-    rootContainer = document.createElement("div"); /*we will mount our component*/
-    document.body.appendChild(rootContainer);
+test('it should have a button type submit (add button).', () => {
+    render(<TaskLogger />);
+    const elem = screen.getByRole('button', {type: /submit/i})
+    expect(elem).toBeInTheDocument();
 });
 
-/*hook that is run automatically after each test*/
-afterEach(() => {
-    document.body.removeChild(rootContainer); /*we will unmount our component*/
-    rootContainer = null;
+test('it should have input fields with a place holder "Task Title:"', () => {
+    render(<TaskLogger />);
+    const elem = screen.getByPlaceholderText('title');
+    expect(elem).toBeInTheDocument();
 });
 
-/*"describe" structures our test script and groups the individual test cases.*/
+test('it should have radio button field with the name "Front-End"', () => {
+    render(<TaskLogger />);
+    const radio = screen.getByLabelText('Front-End');
+    expect(radio).toBeInTheDocument();
+});
 
-
-describe('RenderList: Component that render the list of task from the Local Storage', () => {
-
-    act(() => {
-        ReactDOM.render(<RenderList />, rootContainer);
-    });
-
-	describe('Pending', () => {
-		it('should change color to danger', () => {
-			const initialTodos = [{"id":"1f00c0a4-ec8d-de05-92bd-519b1826b6f3","title":"bbbb","details":"bbbb","status":"Ongoing","color":"primary"}];
-			const action = {
-				type: 'Pending',
-				id: '1f00c0a4-ec8d-de05-92bd-519b1826b6f3'
-			};
-			const nextState = reducer(initialTodos, action);
-
-			expect(nextState).to.deep.equal({"id":"1f00c0a4-ec8d-de05-92bd-519b1826b6f3","title":"bbbb","details":"bbbb","status":"Ongoing","color":"danger"});
-		});
-	});
-
-	// describe('Ongoing', () => {
-	// 	it('should add a new Todo item', () => {
-	// 		const initialState = ['Mow lawn'];
-	// 		const action = {
-	// 			type: 'ADD_TODO',
-	// 			data: 'Walk Dog'
-	// 		};
-	// 		const nextState = reducer(initialState, action);
-
-	// 		expect(nextState).to.deep.equal(['Mow lawn', 'Walk Dog']);
-	// 	});
-	// });
-
-	// describe('Completed', () => {
-	// 	it('should delete a given Todo item', () => {
-	// 		const initialState = ['Mow lawn', 'Walk Dog'];
-	// 		const action = {
-	// 			type: 'DELETE_TODO',
-	// 			data: 'Mow lawn'
-	// 		};
-	// 		const nextState = reducer(initialState, action);
-
-	// 		expect(nextState).to.deep.equal(['Walk Dog']);
-	// 	});
-
-	// 	it('should do nothing if the Todo item to delete is not present', () => {
-	// 		const initialState = ['Mow lawn', 'Walk Dog'];
-	// 		const action = {
-	// 			type: 'DELETE_TODO',
-	// 			data: 'Write tutorial'
-	// 		};
-	// 		const nextState = reducer(initialState, action);
-
-	// 		expect(nextState).to.deep.equal(['Mow lawn', 'Walk Dog']);
-	// 	});
-	// });
+test('it should have radio button field with the name "Back-End"', () => {
+    render(<TaskLogger />);
+    const radio = screen.getByLabelText('Back-End');
+    expect(radio).toBeInTheDocument();
 });

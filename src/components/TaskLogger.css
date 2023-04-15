@@ -50,14 +50,22 @@ span{
     color: gray;
     font-weight: lighter;
 }
+.progress{
+    display: inline-block;
+    height: 40px;
+    width: 520px;
+    line-height: 40px;
+    pointer-events: none;
+}
+
 .btn-delete{
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    color: rgb(255, 255, 255);
+    margin-top: 3px;
+    color:#797474;
+    padding: 0;
+    vertical-align:top;
 }
 .btn-delete:hover{
-    color:#ff0000;
+    color: #ff0000;
 }
 
 
@@ -94,3 +102,62 @@ Form{
 .form-check-inline{
     margin-right: 5px;
 }
+.main-task-container {
+    text-align: center;
+    
+}
+.sub-task-container {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+}
+.task-container{
+    position: relative;
+    height: 40px;
+    text-align: left;
+    border: #c0bfbf 1px solid;
+    border-radius: 10px;
+    margin: 10px 5px;
+    background-color: rgb(255, 255, 255, 0);
+}
+.task-container:hover{
+    cursor: pointer;
+}
+.task-container span, .sub-task div span{
+    position: absolute;
+    font-size: 1.2em;
+    top: 3px;
+    left: 10px;
+    color: #001233;
+    font-weight: bolder;
+}
+
+svg {
+    pointer-events: none;
+  }
+.sub-task{
+    width: 100%;
+}
+.sub-task div{
+    margin: 5px;
+    height: 40px;
+    padding: 0px;
+}
+.sub-task div span{
+    position: relative;
+}
+.sub-task div div{
+   padding: 0px;
+   margin: 0px;
+}
+.sub-task div div .btn{
+    margin: 0px 3px;
+    padding: 3px;
+    margin-top: 3px;
+ }
+ .lastadded{
+    font-size: .6em;
+ }
+ .modal-title{
+    width: 90%;
+ }
