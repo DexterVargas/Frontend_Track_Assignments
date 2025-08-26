@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# React.js: Frontend V88 Bootcamp Assignments
+This repository contains my completed assignments for the frontend track of the V88 Bootcamp, focusing on React.js. The assignments are organized to progressively build foundational skills, from handling state and events to working with APIs and building complex, multi-page applications.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### List of Assignments 
+Each folder/branches in this repository represents a distinct assignment, demonstrating a specific React concept or functionality.
 
-## Available Scripts
+- assignment/click - A simple component that counts clicks, demonstrating basic state management using the useState hook.
 
-In the project directory, you can run:
+- assignment/contactlist - A basic contact list application with a focus on rendering lists of components and passing data through props.
 
-### `npm start`
+- assignment/contactlistlocalstorage - An extension of the contact list, adding functionality to persist data using the browser's localStorage API. This assignment showcases how to save and retrieve data to prevent loss on page refresh.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- assignment/imageapi - An application that fetches and displays images from an external API (e.g., Unsplash or Pexels). This project focuses on asynchronous data fetching using fetch or axios and managing the loading state.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- assignment/lightsOnOff - A simple component that toggles a light on and off, demonstrating how to conditionally render content based on a state variable.
 
-### `npm test`
+- assignment/moneybuttongame - A game where users click a button to earn or lose money, providing practice with state management and event handling for interactive applications.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- assignment/mypet - A component to display information about a virtual pet, illustrating the use of props to customize a component's appearance and behavior.
 
-### `npm run build`
+- assignment/onoff - A basic toggle switch component, similar to lightsOnOff, reinforcing the concept of state-driven UI changes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- assignment/orderform - A multi-step form for placing an order, demonstrating controlled components and form validation. This assignment highlights how to handle user input efficiently.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- assignment/poolsurvey - A survey form that collects data and displays the results, focusing on handling multiple form inputs and managing component state.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- assignment/reaction - A simple reaction timer or game, a great exercise for working with useEffect and handling timers in React.
 
-### `npm run eject`
+- assignment/router - An application with multiple pages, demonstrating client-side routing using React Router. This is essential for building single-page applications (SPAs) with different views.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- assignment/todolist - A classic to-do list application that allows users to add, delete, and mark items as complete. This project combines multiple core concepts, including state management, list rendering, and event handling.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- assignment/youtubeclone - A more advanced project that replicates some functionality of a YouTube video player, including fetching video data from an API and displaying a list of videos. This assignment combines API calls, state management, and component architecture.
